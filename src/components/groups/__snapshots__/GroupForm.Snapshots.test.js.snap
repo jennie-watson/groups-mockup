@@ -6,22 +6,22 @@ exports[`sets submit button label 'Save' when saving is false 1`] = `
 >
   <h2>
     Edit
-     Course
+     Group
   </h2>
   <div
     className="form-group"
   >
     <label
-      htmlFor="title"
+      htmlFor="name"
     >
-      Title
+      Name
     </label>
     <div
       className="field"
     >
       <input
         className="form-control"
-        name="title"
+        name="name"
         onChange={[MockFunction]}
         type="text"
         value="Securing React Apps with Auth0"
@@ -32,23 +32,23 @@ exports[`sets submit button label 'Save' when saving is false 1`] = `
     className="form-group"
   >
     <label
-      htmlFor="authorId"
+      htmlFor="moderatorId"
     >
-      Author
+      Moderator
     </label>
     <div
       className="field"
     >
       <select
         className="form-control"
-        name="authorId"
+        name="moderatorId"
         onChange={[MockFunction]}
         value={1}
       >
         <option
           value=""
         >
-          Select Author
+          Select Moderator
         </option>
         <option
           value={1}
@@ -72,16 +72,16 @@ exports[`sets submit button label 'Save' when saving is false 1`] = `
     className="form-group"
   >
     <label
-      htmlFor="category"
+      htmlFor="description"
     >
-      Category
+      Description
     </label>
     <div
       className="field"
     >
       <input
         className="form-control"
-        name="category"
+        name="description"
         onChange={[MockFunction]}
         type="text"
         value="JavaScript"
@@ -104,22 +104,22 @@ exports[`sets submit button label 'Saving...' when saving is true 1`] = `
 >
   <h2>
     Edit
-     Course
+     Group
   </h2>
   <div
     className="form-group"
   >
     <label
-      htmlFor="title"
+      htmlFor="name"
     >
-      Title
+      Name
     </label>
     <div
       className="field"
     >
       <input
         className="form-control"
-        name="title"
+        name="name"
         onChange={[MockFunction]}
         type="text"
         value="Securing React Apps with Auth0"
@@ -130,23 +130,23 @@ exports[`sets submit button label 'Saving...' when saving is true 1`] = `
     className="form-group"
   >
     <label
-      htmlFor="authorId"
+      htmlFor="moderatorId"
     >
-      Author
+      Moderator
     </label>
     <div
       className="field"
     >
       <select
         className="form-control"
-        name="authorId"
+        name="moderatorId"
         onChange={[MockFunction]}
         value={1}
       >
         <option
           value=""
         >
-          Select Author
+          Select Moderator
         </option>
         <option
           value={1}
@@ -170,16 +170,16 @@ exports[`sets submit button label 'Saving...' when saving is true 1`] = `
     className="form-group"
   >
     <label
-      htmlFor="category"
+      htmlFor="description"
     >
-      Category
+      Description
     </label>
     <div
       className="field"
     >
       <input
         className="form-control"
-        name="category"
+        name="description"
         onChange={[MockFunction]}
         type="text"
         value="JavaScript"

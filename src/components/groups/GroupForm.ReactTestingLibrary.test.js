@@ -1,13 +1,13 @@
 import React from "react";
 import { cleanup, render } from "react-testing-library";
-import CourseForm from "./CourseForm";
+import GroupForm from "./GroupForm";
 
 afterEach(cleanup);
 
-function renderCourseForm(args) {
+function renderGroupForm(args) {
   let defaultProps = {
     authors: [],
-    course: {},
+    group: {},
     saving: false,
     errors: {},
     onSave: () => {},
@@ -15,20 +15,20 @@ function renderCourseForm(args) {
   };
 
   const props = { ...defaultProps, ...args };
-  return render(<CourseForm {...props} />);
+  return render(<GroupForm {...props} />);
 }
 
-it("should render Add Course header", () => {
-  const { getByText } = renderCourseForm();
-  getByText("Add Course");
+it("should render Add Group header", () => {
+  const { getByText } = renderGroupForm();
+  getByText("Add Group");
 });
 
 it('should label save button as "Save" when not saving', () => {
-  const { getByText } = renderCourseForm();
+  const { getByText } = renderGroupForm();
   getByText("Save");
 });
 
 it('should label save button as "Saving..." when saving', () => {
-  const { getByText } = renderCourseForm({ saving: true });
+  const { getByText } = renderGroupForm({ saving: true });
   getByText("Saving...");
 });

@@ -4,9 +4,9 @@ import HomePage from "./home/HomePage";
 import AboutPage from "./about/AboutPage";
 import Header from "./common/Header";
 import PageNotFound from "./PageNotFound";
-import CoursesPage from "./courses/CoursesPage";
+import GroupsPage from "./groups/GroupsPage";
 // eslint-disable-next-line import/no-named-as-default
-import ManageCoursePage from "./courses/ManageCoursePage";
+import ManageGroupPage from "./groups/ManageGroupPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -17,9 +17,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
-        <Route path="/courses" component={CoursesPage} />
-        <Route path="/course/:slug" component={ManageCoursePage} />
-        <Route path="/course" component={ManageCoursePage} />
+        <Route path="/groups" component={GroupsPage} />
+        <Route path="/group/:slug" component={ManageGroupPage} />
+        <Route path="/group" component={ManageGroupPage} />
         <Route component={PageNotFound} />
       </Switch>
       <ToastContainer autoClose={3000} hideProgressBar />

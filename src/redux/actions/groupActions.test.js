@@ -1,6 +1,6 @@
-import * as courseActions from "./courseActions";
+import * as groupActions from "./groupActions";
 import * as types from "./actionTypes";
-import { courses } from "../../../tools/mockData";
+import { groups } from "../../../tools/mockData";
 import thunk from "redux-thunk";
 import fetchMock from "fetch-mock";
 import configureMockStore from "redux-mock-store";
@@ -14,37 +14,37 @@ describe("Async Actions", () => {
     fetchMock.restore();
   });
 
-  describe("Load Courses Thunk", () => {
-    it("should create BEGIN_API_CALL and LOAD_COURSES_SUCCESS when loading courses", () => {
+  describe("Load Groups Thunk", () => {
+    it("should create BEGIN_API_CALL and LOAD_GROUPS_SUCCESS when loading groups", () => {
       fetchMock.mock("*", {
-        body: courses,
+        body: groups,
         headers: { "content-type": "application/json" }
       });
 
       const expectedActions = [
         { type: types.BEGIN_API_CALL },
-        { type: types.LOAD_COURSES_SUCCESS, courses }
+        { type: types.LOAD_GROUPS_SUCCESS, groups }
       ];
 
-      const store = mockStore({ courses: [] });
-      return store.dispatch(courseActions.loadCourses()).then(() => {
+      const store = mockStore({ groups: [] });
+      return store.dispatch(groupActions.loadGroups()).then(() => {
         expect(store.getActions()).toEqual(expectedActions);
       });
     });
   });
 });
 
-describe("createCourseSuccess", () => {
-  it("should create a CREATE_COURSE_SUCCESS action", () => {
+describe("createGroupSuccess", () => {
+  it("should create a CREATE_GROUP_SUCCESS action", () => {
     //arrange
-    const course = courses[0];
+    const group = groups[0];
     const expectedAction = {
-      type: types.CREATE_COURSE_SUCCESS,
-      course
+      type: types.CREATE_GROUP_SUCCESS,
+      group
     };
 
     //act
-    const action = courseActions.createCourseSuccess(course);
+    const action = groupActions.createGroupSuccess(group);
 
     //assert
     expect(action).toEqual(expectedAction);

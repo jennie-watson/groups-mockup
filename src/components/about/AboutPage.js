@@ -4,7 +4,7 @@ const AboutPage = () => (
   <div>
     <h2>About</h2>
     <p>
-      This app uses React, Redux, React Router, and many other helpful
+      This is a Neighbourly Groups mockup that uses React, Redux, React Router, and many other helpful
       libraries.
     </p>
   </div>

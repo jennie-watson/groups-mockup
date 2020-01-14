@@ -1,13 +1,14 @@
 import React from "react";
-import CourseForm from "./CourseForm";
+import GroupForm from "./GroupForm";
 import renderer from "react-test-renderer";
-import { courses, authors } from "../../../tools/mockData";
+import { groups, moderators } from "../../../tools/mockData";
 
 it("sets submit button label 'Saving...' when saving is true", () => {
   const tree = renderer.create(
-    <CourseForm
-      course={courses[0]}
-      authors={authors}
+    <GroupForm
+      group={groups[0]}
+      moderators={moderators}
+      // neighbourhoods={neighbourhoods}
       onSave={jest.fn()}
       onChange={jest.fn()}
       saving
@@ -18,9 +19,10 @@ it("sets submit button label 'Saving...' when saving is true", () => {
 });
 it("sets submit button label 'Save' when saving is false", () => {
   const tree = renderer.create(
-    <CourseForm
-      course={courses[0]}
-      authors={authors}
+    <GroupForm
+      group={groups[0]}
+      moderators={moderators}
+      // neighbourhoods={neighbourhoods}
       onSave={jest.fn()}
       onChange={jest.fn()}
       saving={false}

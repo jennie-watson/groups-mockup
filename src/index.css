@@ -6,3 +6,11 @@
 nav {
   padding: 20px 0 20px 0;
 }
+
+.table thead th {
+  font-size: larger;
+}
+
+.table td {
+  vertical-align: middle;
+}

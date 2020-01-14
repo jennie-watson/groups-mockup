@@ -1,5 +1,6 @@
 export default {
-    courses: [],
-    authors: [],
+    groups: [],
+    moderators: [],
+    // neighbourhoods: [],
     apiCallsInProgress: 0
 };

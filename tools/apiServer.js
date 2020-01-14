@@ -44,12 +44,12 @@ server.use((req, res, next) => {
   next();
 });
 
-server.post("/courses/", function(req, res, next) {
-  const error = validateCourse(req.body);
+server.post("/groups/", function(req, res, next) {
+  const error = validateGroup(req.body);
   if (error) {
     res.status(400).send(error);
   } else {
-    req.body.slug = createSlug(req.body.title); // Generate a slug for new courses.
+    req.body.slug = createSlug(req.body.name); // Generate a slug for new groups.
     next();
   }
 });
@@ -73,9 +73,10 @@ function createSlug(value) {
     .toLowerCase();
 }
 
-function validateCourse(course) {
-  if (!course.title) return "Title is required.";
-  if (!course.authorId) return "Author is required.";
-  if (!course.category) return "Category is required.";
+function validateGroup(group) {
+  if (!group.name) return "Name is required.";
+  if (!group.moderatorId) return "Moderator is required.";
+  if (!group.description) return "Description is required.";
+  // if (!group.neighbourhoodId) return "Neighbourhood is required.";
   return "";
 }

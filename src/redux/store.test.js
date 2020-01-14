@@ -1,20 +1,20 @@
 import { createStore } from "redux";
 import rootReducer from "./reducers";
 import initialState from "./reducers/initialState";
-import * as courseActions from "./actions/courseActions";
+import * as groupActions from "./actions/groupActions";
 
-it("Should handle creating courses", function() {
+it("Should handle creating groups", function() {
   // arrange
   const store = createStore(rootReducer, initialState);
-  const course = {
-    title: "Clean Code"
+  const group = {
+    name: "Clean Code"
   };
 
   // act
-  const action = courseActions.createCourseSuccess(course);
+  const action = groupActions.createGroupSuccess(group);
   store.dispatch(action);
 
   // assert
-  const createdCourse = store.getState().courses[0];
-  expect(createdCourse).toEqual(course);
+  const createdGroup = store.getState().groups[0];
+  expect(createdGroup).toEqual(group);
 });
