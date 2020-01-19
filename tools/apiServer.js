@@ -75,7 +75,7 @@ function createSlug(value) {
 
 function validateGroup(group) {
   if (!group.name) return "Name is required.";
-  if (!group.moderatorId) return "Moderator is required.";
+  if (!group.moderatorUserId) return "Moderator is required.";
   if (!group.description) return "Description is required.";
   // if (!group.neighbourhoodId) return "Neighbourhood is required.";
   return "";

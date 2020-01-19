@@ -34,13 +34,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(jpg|JPG|js|jsx)$/,
         exclude: /node_modules/,
         use: ["babel-loader", "eslint-loader"]
       },
       {
         test: /(\.css)$/,
         use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 25000
+          }
+        }
       }
     ]
   }

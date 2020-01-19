@@ -20,8 +20,8 @@ const GroupList = ({ groups, onDeleteClick }) => (
           <tr key={group.id}>
             <td>
               <a
-                className="btn btn-outline-info" 
-                href={"https://www.neighbourly.co.nz/group/" + groups.slug}
+                className="btn btn-outline-info"
+                href={"https://www.neighbourly.co.nz/group/" + group.slug}
               >
                 Groups
               </a>

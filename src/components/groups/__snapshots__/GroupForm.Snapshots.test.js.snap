@@ -32,7 +32,7 @@ exports[`sets submit button label 'Save' when saving is false 1`] = `
     className="form-group"
   >
     <label
-      htmlFor="moderatorId"
+      htmlFor="moderatorUserId"
     >
       Moderator
     </label>
@@ -41,7 +41,7 @@ exports[`sets submit button label 'Save' when saving is false 1`] = `
     >
       <select
         className="form-control"
-        name="moderatorId"
+        name="moderatorUserId"
         onChange={[MockFunction]}
         value={1}
       >
@@ -130,7 +130,7 @@ exports[`sets submit button label 'Saving...' when saving is true 1`] = `
     className="form-group"
   >
     <label
-      htmlFor="moderatorId"
+      htmlFor="moderatorUserId"
     >
       Moderator
     </label>
@@ -139,7 +139,7 @@ exports[`sets submit button label 'Saving...' when saving is true 1`] = `
     >
       <select
         className="form-control"
-        name="moderatorId"
+        name="moderatorUserId"
         onChange={[MockFunction]}
         value={1}
       >

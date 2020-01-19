@@ -1,0 +1,50 @@
+#app {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+nav {
+  padding: 20px 0 20px 0;
+}
+
+.navbar {
+  font-size: 20px;
+  color: #08738c;
+  text-decoration-color: none;
+}
+
+.table thead th {
+  font-size: larger;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.group-list {
+  font-size: medium;
+}
+
+.banner h1 {
+  color: #60a735;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.banner {
+  color: black;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner img {
+  width: 500px;
+  align-items: center;
+}
+
+.about-page {
+  text-align: center;
+}

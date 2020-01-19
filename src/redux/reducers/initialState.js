@@ -1,6 +1,6 @@
 export default {
-    groups: [],
-    moderators: [],
-    // neighbourhoods: [],
-    apiCallsInProgress: 0
+  groups: [],
+  moderators: [],
+  // neighbourhoods: [],
+  apiCallsInProgress: 0
 };

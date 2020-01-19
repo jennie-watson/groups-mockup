@@ -41,10 +41,10 @@ const GroupForm = ({
       ></textarea>
       <br />
 
-{/* KEY MISSING FROM BELOW MAP FUNCTIONS - WARNING MESSAGES WHEN ADDING AND EDITING GROUPS */}
+      {/* KEY MISSING FROM BELOW MAP FUNCTIONS - WARNING MESSAGES WHEN ADDING AND EDITING GROUPS */}
       <SelectInput
-        name="moderatorId"
-        value={group.moderatorId || ""}
+        name="moderatorUserId"
+        value={group.moderatorUserId || ""}
         defaultOption="Select Moderator"
         options={moderators.map(moderator => ({
           value: moderator.id,

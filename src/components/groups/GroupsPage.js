@@ -91,8 +91,8 @@ function mapStateToProps(state) {
             return {
               ...group,
               moderatorName: state.moderators.find(
-                a => a.id === group.moderatorId
-              ).name // maps over to find groupName relevant to moderatorId
+                a => a.id === group.moderatorUserId
+              ).name // maps over to find groupName relevant to moderatorUserId
             };
           }),
     moderators: state.moderators,
@@ -103,10 +103,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actions: {
-      loadGroups: bindActionCreators(
-        groupActions.loadGroups, 
-        dispatch
-      ),
+      loadGroups: bindActionCreators(groupActions.loadGroups, dispatch),
       loadModerators: bindActionCreators(
         moderatorActions.loadModerators,
         dispatch

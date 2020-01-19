@@ -5,10 +5,10 @@ import moderators from "./moderatorReducer";
 import apiÇallsInProgress from "./apiStatusReducer";
 
 const rootReducer = combineReducers({
-    groups,
-    moderators,
-    // neighbourhoods,
-    apiÇallsInProgress
+  groups,
+  moderators,
+  // neighbourhoods,
+  apiÇallsInProgress
 });
 
 export default rootReducer;

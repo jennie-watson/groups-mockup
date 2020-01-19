@@ -49,16 +49,16 @@ export function ManageGroupPage({
     const { name, value } = event.target;
     setGroup(prevGroup => ({
       ...prevGroup,
-      [name]: name === "moderatorId" ? parseInt(value, 10) : value
+      [name]: name === "moderatorUserId" ? parseInt(value, 10) : value
     }));
   }
 
   function formIsValid() {
-    const { name, moderatorId, description } = group;
+    const { name, moderatorUserId, description } = group;
     const errors = {};
 
     if (!name) errors.name = "Name is required.";
-    if (!moderatorId) errors.moderator = "Moderator is required.";
+    if (!moderatorUserId) errors.moderator = "Moderator is required.";
     if (!description) errors.description = "Description is required.";
     // if (!neighbourhoodId) errors.neighbourhood = "Neighbourhood is required.";
 
@@ -125,7 +125,7 @@ function mapStateToProps(state, ownProps) {
   return {
     group,
     groups: state.groups,
-    moderators: state.moderators,
+    moderators: state.moderators
     // neighbourhoods: state.neighbourhoods
   };
 }

@@ -50,9 +50,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(jpg|JPG|js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader", "eslint-loader"]
+        use: ["babel-loader", "eslint-loader", "url-loader"]
       },
       {
         test: /(\.css)$/,

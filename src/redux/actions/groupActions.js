@@ -51,7 +51,7 @@ export function saveGroup(group) {
 }
 
 export function deleteGroup(group) {
-  return function (dispatch) {
+  return function(dispatch) {
     // Doing optimistic delete, so not dispatching begin/end api call actions, or apiCallError action since we're not showing the loading status for this.
     dispatch(deleteGroupOptimistic(group));
     return groupApi.deleteGroup(group.id);
