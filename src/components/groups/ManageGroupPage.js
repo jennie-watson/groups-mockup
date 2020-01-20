@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { loadGroups, saveGroup } from "../../redux/actions/groupActions";
 import { loadModerators } from "../../redux/actions/moderatorActions";
-// import { loadNeighbourhoods } from "../../redux/actions/neighbourhoodActions";
 import PropTypes from "prop-types";
 import GroupForm from "./GroupForm";
 import { newGroup } from "../../../tools/mockData";
@@ -12,8 +11,6 @@ import { toast } from "react-toastify";
 export function ManageGroupPage({
   groups,
   moderators,
-  // neighbourhoods,
-  // loadNeighbourhoods,
   loadModerators,
   loadGroups,
   saveGroup,
@@ -38,11 +35,6 @@ export function ManageGroupPage({
         alert("Loading moderators failed" + error);
       });
     }
-    // if (neighbourhoods.length === 0) {
-    //   loadNeighbourhoods().catch(error => {
-    //     alert("Loading neighbourhoods failed" + error);
-    //   });
-    // }
   }, [props.group]);
 
   function handleChange(event) {
@@ -60,7 +52,6 @@ export function ManageGroupPage({
     if (!name) errors.name = "Name is required.";
     if (!moderatorUserId) errors.moderator = "Moderator is required.";
     if (!description) errors.description = "Description is required.";
-    // if (!neighbourhoodId) errors.neighbourhood = "Neighbourhood is required.";
 
     setErrors(errors);
     // Form is valid if the errors object still has no properties
@@ -89,7 +80,6 @@ export function ManageGroupPage({
       group={group}
       errors={errors}
       moderators={moderators}
-      // neighbourhoods={neighbourhoods}
       onChange={handleChange}
       onSave={handleSave}
       saving={saving}
@@ -101,11 +91,9 @@ export function ManageGroupPage({
 ManageGroupPage.propTypes = {
   group: PropTypes.object.isRequired,
   moderators: PropTypes.array.isRequired,
-  // neighbourhoods: PropTypes.array.isRequired,
   groups: PropTypes.array.isRequired,
   loadGroups: PropTypes.func.isRequired,
   loadModerators: PropTypes.func.isRequired,
-  // loadNeighbourhoods: PropTypes.func.isRequired,
   saveGroup: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired
 };
@@ -126,14 +114,12 @@ function mapStateToProps(state, ownProps) {
     group,
     groups: state.groups,
     moderators: state.moderators
-    // neighbourhoods: state.neighbourhoods
   };
 }
 
 const mapDispatchToProps = {
   loadGroups,
   loadModerators,
-  // loadNeighbourhoods,
   saveGroup
 };
 

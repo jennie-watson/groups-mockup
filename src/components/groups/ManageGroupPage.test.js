@@ -6,7 +6,6 @@ import { ManageGroupPage } from "./ManageGroupPage";
 function render(args) {
   const defaultProps = {
     moderators,
-    // neighbourhoods,
     groups,
     // Passed from React Router in real app, so just stubbing in for test.
     // Could also choose to use MemoryRouter as shown in Header.test.js,
@@ -15,7 +14,6 @@ function render(args) {
     history: {},
     saveGroup: jest.fn(),
     loadModerators: jest.fn(),
-    loadNeighbourhoods: jest.fn(),
     loadGroups: jest.fn(),
     group: newGroup,
     match: {}

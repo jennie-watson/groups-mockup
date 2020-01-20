@@ -10,7 +10,6 @@ const GroupList = ({ groups, onDeleteClick }) => (
         <th>Name</th>
         <th>Moderator</th>
         <th>Description</th>
-        {/* <th>Neighbourhood</th> */}
         <th />
       </tr>
     </thead>
@@ -31,7 +30,6 @@ const GroupList = ({ groups, onDeleteClick }) => (
             </td>
             <td>{group.moderatorName}</td>
             <td>{group.description}</td>
-            {/* <td>{group.neighbourhoodName}</td> */}
             <td>
               <button
                 className="btn btn-outline-danger"

@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import * as groupActions from "../../redux/actions/groupActions";
 import * as moderatorActions from "../../redux/actions/moderatorActions";
-// import * as neighbourhoodActions from "../../redux/actions/neighbourhoodActions";
 import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
 import GroupList from "./GroupList";
@@ -29,12 +28,6 @@ class GroupsPage extends React.Component {
         alert("Loading moderators failed" + error);
       });
     }
-
-    // if (neighbourhoods.length === 0) {
-    //   actions.loadNeighbourhoods().catch(error => {
-    //     alert("Loading neighbourhoods failed" + error);
-    //   });
-    // }
   }
 
   handleDeleteGroup = async group => {
@@ -76,7 +69,6 @@ class GroupsPage extends React.Component {
 
 GroupsPage.propTypes = {
   moderators: PropTypes.array.isRequired,
-  // neighbourhoods: PropTypes.array.isRequired,
   groups: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired
@@ -108,10 +100,6 @@ function mapDispatchToProps(dispatch) {
         moderatorActions.loadModerators,
         dispatch
       ),
-      // loadNeighbourhoods: bindActionCreators(
-      //   neighbourhoodActions.loadNeighbourhoods,
-      //   dispatch
-      // ),
       deleteGroup: bindActionCreators(groupActions.deleteGroup, dispatch)
     }
   };

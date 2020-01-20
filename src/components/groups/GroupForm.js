@@ -6,7 +6,6 @@ import SelectInput from "../common/SelectInput";
 const GroupForm = ({
   group,
   moderators,
-  // neighbourhoods,
   onSave,
   onChange,
   saving = false,
@@ -41,7 +40,6 @@ const GroupForm = ({
       ></textarea>
       <br />
 
-      {/* KEY MISSING FROM BELOW MAP FUNCTIONS - WARNING MESSAGES WHEN ADDING AND EDITING GROUPS */}
       <SelectInput
         name="moderatorUserId"
         value={group.moderatorUserId || ""}
@@ -54,20 +52,6 @@ const GroupForm = ({
         error={errors.moderator}
       />
 
-      {/* <SelectInput
-        className="neighbourhood-select"
-        id="recipient-neighbourhoods"
-        name="neighbourhoodId"
-        value={group.neighbourhoodId || ""}
-        defaultOption="Share with Neighbourhoods"
-        options={neighbourhoods.map(neighbourhood => ({
-          value: neighbourhood.id,
-          text: neighbourhood.name
-        }))}
-        onChange={onChange}
-        error={errors.neighbourhood}
-      /> */}
-
       <button type="submit" disabled={saving} className="btn btn-primary">
         {saving ? "Saving..." : "Save"}
       </button>
@@ -76,7 +60,6 @@ const GroupForm = ({
 };
 
 GroupForm.propTypes = {
-  // neighbourhoods: PropTypes.array.isRequired,
   moderators: PropTypes.array.isRequired,
   group: PropTypes.object.isRequired,
   errors: PropTypes.object,

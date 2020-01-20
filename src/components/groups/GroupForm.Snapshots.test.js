@@ -8,7 +8,6 @@ it("sets submit button label 'Saving...' when saving is true", () => {
     <GroupForm
       group={groups[0]}
       moderators={moderators}
-      // neighbourhoods={neighbourhoods}
       onSave={jest.fn()}
       onChange={jest.fn()}
       saving
@@ -22,7 +21,6 @@ it("sets submit button label 'Save' when saving is false", () => {
     <GroupForm
       group={groups[0]}
       moderators={moderators}
-      // neighbourhoods={neighbourhoods}
       onSave={jest.fn()}
       onChange={jest.fn()}
       saving={false}

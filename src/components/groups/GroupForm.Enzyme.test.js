@@ -5,7 +5,6 @@ import { shallow } from "enzyme";
 function renderGroupForm(args) {
   const defaultProps = {
     moderators: [],
-    // neighbourhoods: [],
     group: {},
     saving: false,
     errors: {},
