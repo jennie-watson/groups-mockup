@@ -1,1014 +1,142 @@
+// /neighbourly/group/{id} API - finds a group by id
+
 const groups = [
   {
-    id: 1,
+    id: 7571,
     name: "Travel Group",
     slug: "travel-group-1",
-    description: "Travel ideas within NZ",
-    isPrivate: false,
+    description:
+      "Throw around ideas on travel, overseas and in New Zealand. Weekends away, cruising etc. Some times it is nice to travel with a group or couples who share the same interests.",
+      moderatorUserId: 1,
     logo: {
-      imnage: "",
-      url: ""
+      imageBasePath: "/images/cache",
+      image: "/bundles/neighbourlystatic/img/default-business.png",
+      isStatic: true
     },
-    neighbourhoods: [1023, 3606],
+  },
+
+  {
+    id: 15875,
+    name: "Auckland Movie Club",
+    slug: "auckland-movie-club",
+    description: "A place where movie lovers can gather and watch movies",
     moderatorUserId: 1,
-    memberUserIds: [1, 304634],
-    messages: [
-      {
-        id: 278572,
-        subject: "Message subject",
-        message: "full message copy",
-        userId: 304634,
-        user: {
-          id: 278572,
-          firstName: "Oliver",
-          lastName: "Kastler",
-          email: "oliver@ideahq.co.nz",
-          phone: "094731234",
-          mobile: "021123456789",
-          avatarUrl: "",
-          profileImage: {
-            id: 278572,
-            imageType: "png",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          },
-          neighbourhoodId: 3606,
-          neighbourhoodName: "Remuera",
-          createdAt: "2018-07-05 11:40:16"
-        },
-        organisation: {
-          id: 278572,
-          name: "Mike Pero Real Estate Rolleston",
-          slug: "mike-pero-real-estate-rolleston",
-          logo: "/attachments/568eb298e26226.96839916.png",
-          logoImage: {
-            id: 278572,
-            imageType: "...",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          }
-        },
-        fromOverride: "BP Tirau",
-        createdAt: "2018-06-08 10:20:30",
-        updatedAt: "2018-07-02 10:20:30",
-        categoryId: 10,
-        categoryFlag: "free",
-        inReplyToMessageId: 10,
-        eventId: 663710,
-        thankType: "thank",
-        originNeighbourhood: {
-          id: 278572,
-          name: "Remuera",
-          parentName: "Auckland",
-          nearbyNeighbourhoodIds: [[1023, 3606]],
-          needsLead: true,
-          isActive: true,
-          neighbourhoodDistrictId: 278572,
-          localPublicationId: 278572
-        },
-        pollId: 12383,
-        isPublic: false,
-        images: [
-          {
-            id: 278572,
-            imagePath: "5b3193b87de1f3.32060714.jpeg",
-            createdAt: "2018-07-02 08:32:03",
-            updatedAt: "2018-07-02 08:32:10",
-            title: "image title, this can be a quite long text",
-            imageWidth: 675,
-            imageHeight: 1200,
-            location: "message_images",
-            type: ["", "email", "video"],
-            isStatic: true,
-            isRelative: true,
-            url: "https://cdn.neighbourly.co.nz/some-image.csv"
-          }
-        ],
-        links: [["https://www.neighbourly.co.nz/", "https://www.google.de/"]],
-        recipientNeighbourhoodIds: [[1023, 3606]],
-        bulkMessageId: 12014,
-        replyMessageIds: [[47972909]],
-        userThanksUserIds: [[5542931, 6520740]],
-        userLikesUserIds: [[5542931, 6520740]],
-        isCurrentlyPromoted: false,
-        promotionType: "local_highlight",
-        isClassified: false,
-        price: "string",
-        externalLink: "string",
-        externalLinkText: "string",
-        fromName: "string"
-      }
-    ]
-  },
-  {
-    id: 2,
-    name: "Old Auckland",
-    slug: "old-auckland-2",
-    description: "Celebrating Auckland from yesterday",
-    isPrivate: false,
     logo: {
-      imnage: "",
-      url: ""
+      imageBasePath: "/images/cache",
+      image: "/bundles/neighbourlystatic/img/default-business.png",
+      isStatic: true
     },
-    neighbourhoods: [1023, 3606],
-    moderatorUserId: 4,
-    memberUserIds: [1, 304634],
-    messages: [
-      {
-        id: 278572,
-        subject: "Message subject",
-        message: "full message copy",
-        userId: 304634,
-        user: {
-          id: 278572,
-          firstName: "Oliver",
-          lastName: "Kastler",
-          email: "oliver@ideahq.co.nz",
-          phone: "094731234",
-          mobile: "021123456789",
-          avatarUrl: "",
-          profileImage: {
-            id: 278572,
-            imageType: "png",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          },
-          neighbourhoodId: 3606,
-          neighbourhoodName: "Remuera",
-          createdAt: "2018-07-05 11:40:16"
-        },
-        organisation: {
-          id: 278572,
-          name: "Mike Pero Real Estate Rolleston",
-          slug: "mike-pero-real-estate-rolleston",
-          logo: "/attachments/568eb298e26226.96839916.png",
-          logoImage: {
-            id: 278572,
-            imageType: "...",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          }
-        },
-        fromOverride: "BP Tirau",
-        createdAt: "2018-06-08 10:20:30",
-        updatedAt: "2018-07-02 10:20:30",
-        categoryId: 10,
-        categoryFlag: "free",
-        inReplyToMessageId: 10,
-        eventId: 663710,
-        thankType: "thank",
-        originNeighbourhood: {
-          id: 278572,
-          name: "Remuera",
-          parentName: "Auckland",
-          nearbyNeighbourhoodIds: [[1023, 3606]],
-          needsLead: true,
-          isActive: true,
-          neighbourhoodDistrictId: 278572,
-          localPublicationId: 278572
-        },
-        pollId: 12383,
-        isPublic: false,
-        images: [
-          {
-            id: 278572,
-            imagePath: "5b3193b87de1f3.32060714.jpeg",
-            createdAt: "2018-07-02 08:32:03",
-            updatedAt: "2018-07-02 08:32:10",
-            title: "image title, this can be a quite long text",
-            imageWidth: 675,
-            imageHeight: 1200,
-            location: "message_images",
-            type: ["", "email", "video"],
-            isStatic: true,
-            isRelative: true,
-            url: "https://cdn.neighbourly.co.nz/some-image.csv"
-          }
-        ],
-        links: [["https://www.neighbourly.co.nz/", "https://www.google.de/"]],
-        recipientNeighbourhoodIds: [[1023, 3606]],
-        bulkMessageId: 12014,
-        replyMessageIds: [[47972909]],
-        userThanksUserIds: [[5542931, 6520740]],
-        userLikesUserIds: [[5542931, 6520740]],
-        isCurrentlyPromoted: false,
-        promotionType: "local_highlight",
-        isClassified: false,
-        price: "string",
-        externalLink: "string",
-        externalLinkText: "string",
-        fromName: "string"
-      }
-    ]
   },
+
   {
-    id: 3,
-    name: "AKL Central",
+    id: 8295,
+    name: "AKL central",
     slug: "akl-central",
-    description: "All things Auckland Central",
-    isPrivate: false,
-    logo: {
-      imnage: "",
-      url: ""
-    },
-    neighbourhoods: [1023, 3606],
-    moderatorUserId: 3,
-    memberUserIds: [1, 304634],
-    messages: [
-      {
-        id: 278572,
-        subject: "Message subject",
-        message: "full message copy",
-        userId: 304634,
-        user: {
-          id: 278572,
-          firstName: "Oliver",
-          lastName: "Kastler",
-          email: "oliver@ideahq.co.nz",
-          phone: "094731234",
-          mobile: "021123456789",
-          avatarUrl: "",
-          profileImage: {
-            id: 278572,
-            imageType: "png",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          },
-          neighbourhoodId: 3606,
-          neighbourhoodName: "Remuera",
-          createdAt: "2018-07-05 11:40:16"
-        },
-        organisation: {
-          id: 278572,
-          name: "Mike Pero Real Estate Rolleston",
-          slug: "mike-pero-real-estate-rolleston",
-          logo: "/attachments/568eb298e26226.96839916.png",
-          logoImage: {
-            id: 278572,
-            imageType: "...",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          }
-        },
-        fromOverride: "BP Tirau",
-        createdAt: "2018-06-08 10:20:30",
-        updatedAt: "2018-07-02 10:20:30",
-        categoryId: 10,
-        categoryFlag: "free",
-        inReplyToMessageId: 10,
-        eventId: 663710,
-        thankType: "thank",
-        originNeighbourhood: {
-          id: 278572,
-          name: "Remuera",
-          parentName: "Auckland",
-          nearbyNeighbourhoodIds: [[1023, 3606]],
-          needsLead: true,
-          isActive: true,
-          neighbourhoodDistrictId: 278572,
-          localPublicationId: 278572
-        },
-        pollId: 12383,
-        isPublic: false,
-        images: [
-          {
-            id: 278572,
-            imagePath: "5b3193b87de1f3.32060714.jpeg",
-            createdAt: "2018-07-02 08:32:03",
-            updatedAt: "2018-07-02 08:32:10",
-            title: "image title, this can be a quite long text",
-            imageWidth: 675,
-            imageHeight: 1200,
-            location: "message_images",
-            type: ["", "email", "video"],
-            isStatic: true,
-            isRelative: true,
-            url: "https://cdn.neighbourly.co.nz/some-image.csv"
-          }
-        ],
-        links: [["https://www.neighbourly.co.nz/", "https://www.google.de/"]],
-        recipientNeighbourhoodIds: [[1023, 3606]],
-        bulkMessageId: 12014,
-        replyMessageIds: [[47972909]],
-        userThanksUserIds: [[5542931, 6520740]],
-        userLikesUserIds: [[5542931, 6520740]],
-        isCurrentlyPromoted: false,
-        promotionType: "local_highlight",
-        isClassified: false,
-        price: "string",
-        externalLink: "string",
-        externalLinkText: "string",
-        fromName: "string"
-      }
-    ]
-  },
-  {
-    id: 4,
-    name: "Book Lovers",
-    slug: "booklovers",
-    description: "For anyone that loves to read",
-    isPrivate: false,
-    logo: {
-      imnage: "",
-      url: ""
-    },
-    neighbourhoods: [1023, 3606],
-    moderatorUserId: 5,
-    memberUserIds: [1, 304634],
-    messages: [
-      {
-        id: 278572,
-        subject: "Message subject",
-        message: "full message copy",
-        userId: 304634,
-        user: {
-          id: 278572,
-          firstName: "Oliver",
-          lastName: "Kastler",
-          email: "oliver@ideahq.co.nz",
-          phone: "094731234",
-          mobile: "021123456789",
-          avatarUrl: "",
-          profileImage: {
-            id: 278572,
-            imageType: "png",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          },
-          neighbourhoodId: 3606,
-          neighbourhoodName: "Remuera",
-          createdAt: "2018-07-05 11:40:16"
-        },
-        organisation: {
-          id: 278572,
-          name: "Mike Pero Real Estate Rolleston",
-          slug: "mike-pero-real-estate-rolleston",
-          logo: "/attachments/568eb298e26226.96839916.png",
-          logoImage: {
-            id: 278572,
-            imageType: "...",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          }
-        },
-        fromOverride: "BP Tirau",
-        createdAt: "2018-06-08 10:20:30",
-        updatedAt: "2018-07-02 10:20:30",
-        categoryId: 10,
-        categoryFlag: "free",
-        inReplyToMessageId: 10,
-        eventId: 663710,
-        thankType: "thank",
-        originNeighbourhood: {
-          id: 278572,
-          name: "Remuera",
-          parentName: "Auckland",
-          nearbyNeighbourhoodIds: [[1023, 3606]],
-          needsLead: true,
-          isActive: true,
-          neighbourhoodDistrictId: 278572,
-          localPublicationId: 278572
-        },
-        pollId: 12383,
-        isPublic: false,
-        images: [
-          {
-            id: 278572,
-            imagePath: "5b3193b87de1f3.32060714.jpeg",
-            createdAt: "2018-07-02 08:32:03",
-            updatedAt: "2018-07-02 08:32:10",
-            title: "image title, this can be a quite long text",
-            imageWidth: 675,
-            imageHeight: 1200,
-            location: "message_images",
-            type: ["", "email", "video"],
-            isStatic: true,
-            isRelative: true,
-            url: "https://cdn.neighbourly.co.nz/some-image.csv"
-          }
-        ],
-        links: [["https://www.neighbourly.co.nz/", "https://www.google.de/"]],
-        recipientNeighbourhoodIds: [[1023, 3606]],
-        bulkMessageId: 12014,
-        replyMessageIds: [[47972909]],
-        userThanksUserIds: [[5542931, 6520740]],
-        userLikesUserIds: [[5542931, 6520740]],
-        isCurrentlyPromoted: false,
-        promotionType: "local_highlight",
-        isClassified: false,
-        price: "string",
-        externalLink: "string",
-        externalLinkText: "string",
-        fromName: "string"
-      }
-    ]
-  },
-  {
-    id: 5,
-    name: "Craft Club",
-    slug: "for-the-love-of-all-things-tiny",
-    description: "Do you love crafts?",
-    isPrivate: false,
-    logo: {
-      imnage: "",
-      url: ""
-    },
-    neighbourhoods: [1023, 3606],
+    description: "Around AKL central",
     moderatorUserId: 1,
-    memberUserIds: [1, 304634],
-    messages: [
-      {
-        id: 278572,
-        subject: "Message subject",
-        message: "full message copy",
-        userId: 304634,
-        user: {
-          id: 278572,
-          firstName: "Oliver",
-          lastName: "Kastler",
-          email: "oliver@ideahq.co.nz",
-          phone: "094731234",
-          mobile: "021123456789",
-          avatarUrl: "",
-          profileImage: {
-            id: 278572,
-            imageType: "png",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          },
-          neighbourhoodId: 3606,
-          neighbourhoodName: "Remuera",
-          createdAt: "2018-07-05 11:40:16"
-        },
-        organisation: {
-          id: 278572,
-          name: "Mike Pero Real Estate Rolleston",
-          slug: "mike-pero-real-estate-rolleston",
-          logo: "/attachments/568eb298e26226.96839916.png",
-          logoImage: {
-            id: 278572,
-            imageType: "...",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          }
-        },
-        fromOverride: "BP Tirau",
-        createdAt: "2018-06-08 10:20:30",
-        updatedAt: "2018-07-02 10:20:30",
-        categoryId: 10,
-        categoryFlag: "free",
-        inReplyToMessageId: 10,
-        eventId: 663710,
-        thankType: "thank",
-        originNeighbourhood: {
-          id: 278572,
-          name: "Remuera",
-          parentName: "Auckland",
-          nearbyNeighbourhoodIds: [[1023, 3606]],
-          needsLead: true,
-          isActive: true,
-          neighbourhoodDistrictId: 278572,
-          localPublicationId: 278572
-        },
-        pollId: 12383,
-        isPublic: false,
-        images: [
-          {
-            id: 278572,
-            imagePath: "5b3193b87de1f3.32060714.jpeg",
-            createdAt: "2018-07-02 08:32:03",
-            updatedAt: "2018-07-02 08:32:10",
-            title: "image title, this can be a quite long text",
-            imageWidth: 675,
-            imageHeight: 1200,
-            location: "message_images",
-            type: ["", "email", "video"],
-            isStatic: true,
-            isRelative: true,
-            url: "https://cdn.neighbourly.co.nz/some-image.csv"
-          }
-        ],
-        links: [["https://www.neighbourly.co.nz/", "https://www.google.de/"]],
-        recipientNeighbourhoodIds: [[1023, 3606]],
-        bulkMessageId: 12014,
-        replyMessageIds: [[47972909]],
-        userThanksUserIds: [[5542931, 6520740]],
-        userLikesUserIds: [[5542931, 6520740]],
-        isCurrentlyPromoted: false,
-        promotionType: "local_highlight",
-        isClassified: false,
-        price: "string",
-        externalLink: "string",
-        externalLinkText: "string",
-        fromName: "string"
-      }
-    ]
-  },
-  {
-    id: 6,
-    name: "IT & Tech Enthusiasts",
-    slug: "it",
-    description: "All about tech",
-    isPrivate: false,
     logo: {
-      imnage: "",
-      url: ""
+      imageBasePath: "/images/cache",
+      image: "/bundles/neighbourlystatic/img/default-business.png",
+      isStatic: true
     },
-    neighbourhoods: [1023, 3606],
-    moderatorUserId: 2,
-    memberUserIds: [1, 304634],
-    messages: [
-      {
-        id: 278572,
-        subject: "Message subject",
-        message: "full message copy",
-        userId: 304634,
-        user: {
-          id: 278572,
-          firstName: "Oliver",
-          lastName: "Kastler",
-          email: "oliver@ideahq.co.nz",
-          phone: "094731234",
-          mobile: "021123456789",
-          avatarUrl: "",
-          profileImage: {
-            id: 278572,
-            imageType: "png",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          },
-          neighbourhoodId: 3606,
-          neighbourhoodName: "Remuera",
-          createdAt: "2018-07-05 11:40:16"
-        },
-        organisation: {
-          id: 278572,
-          name: "Mike Pero Real Estate Rolleston",
-          slug: "mike-pero-real-estate-rolleston",
-          logo: "/attachments/568eb298e26226.96839916.png",
-          logoImage: {
-            id: 278572,
-            imageType: "...",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          }
-        },
-        fromOverride: "BP Tirau",
-        createdAt: "2018-06-08 10:20:30",
-        updatedAt: "2018-07-02 10:20:30",
-        categoryId: 10,
-        categoryFlag: "free",
-        inReplyToMessageId: 10,
-        eventId: 663710,
-        thankType: "thank",
-        originNeighbourhood: {
-          id: 278572,
-          name: "Remuera",
-          parentName: "Auckland",
-          nearbyNeighbourhoodIds: [[1023, 3606]],
-          needsLead: true,
-          isActive: true,
-          neighbourhoodDistrictId: 278572,
-          localPublicationId: 278572
-        },
-        pollId: 12383,
-        isPublic: false,
-        images: [
-          {
-            id: 278572,
-            imagePath: "5b3193b87de1f3.32060714.jpeg",
-            createdAt: "2018-07-02 08:32:03",
-            updatedAt: "2018-07-02 08:32:10",
-            title: "image title, this can be a quite long text",
-            imageWidth: 675,
-            imageHeight: 1200,
-            location: "message_images",
-            type: ["", "email", "video"],
-            isStatic: true,
-            isRelative: true,
-            url: "https://cdn.neighbourly.co.nz/some-image.csv"
-          }
-        ],
-        links: [["https://www.neighbourly.co.nz/", "https://www.google.de/"]],
-        recipientNeighbourhoodIds: [[1023, 3606]],
-        bulkMessageId: 12014,
-        replyMessageIds: [[47972909]],
-        userThanksUserIds: [[5542931, 6520740]],
-        userLikesUserIds: [[5542931, 6520740]],
-        isCurrentlyPromoted: false,
-        promotionType: "local_highlight",
-        isClassified: false,
-        price: "string",
-        externalLink: "string",
-        externalLinkText: "string",
-        fromName: "string"
-      }
-    ]
   },
+
   {
-    id: 7,
+    id: 66,
+    name: "Booklovers",
+    slug: "booklovers",
+    description:
+      "A group for anyone who loves to read!  This is a place to recommend, swap and discuss favourite books, chat about bookstores and literary events, and indulge in other bibliophile matters.",
+      moderatorUserId: 1,
+    logo: {
+      imageBasePath: "/images/cache",
+      image: "/bundles/neighbourlystatic/img/default-business.png",
+      isStatic: true
+    },
+  },
+
+  {
+    id: 2684,
+    name: "FOR THE LOVE OF ALL THINGS CRAFTY",
+    slug: "for-the-love-of-all-things-tiny",
+    description:
+      "Do you love crafts? This group is for everyone who can create and/or who has a real appreciation for what goes into hand crafting fine objects. You don't have to be an established  artist but someone who really enjoys the process of creating. Please share your work and feedback here and inspire the rest of us.",
+      moderatorUserId: 1,
+    logo: {
+      imageBasePath: "/images/cache",
+      image: "/bundles/neighbourlystatic/img/default-business.png",
+      isStatic: true
+    },
+  },
+
+  {
+    id: 2500,
+    name: "IT",
+    slug: "it",
+    description:
+      "All about Information Technology. Need help with your computer or gadget? Share with us here..",
+      moderatorUserId: 1,
+    logo: {
+      imageBasePath: "/images/cache",
+      image: "/bundles/neighbourlystatic/img/default-business.png",
+      isStatic: true
+    },
+  },
+
+  {
+    id: 21973,
     name: "Pets of Auckland",
     slug: "pets-of-auckland",
-    description: "All pet owners welcome",
-    isPrivate: false,
+    description:
+      "A place to swap advice, share sweet photos, post ideas and tips. All pet owners are welcome.",
+      moderatorUserId: 1,
     logo: {
-      imnage: "",
-      url: ""
+      imageBasePath: "/images/cache",
+      imageType: "attachments",
+      image: "5c3be35161c042.02386669.png",
+      isStatic: false
     },
-    neighbourhoods: [1023, 3606],
-    moderatorUserId: 5,
-    memberUserIds: [1, 304634],
-    messages: [
-      {
-        id: 278572,
-        subject: "Message subject",
-        message: "full message copy",
-        userId: 304634,
-        user: {
-          id: 278572,
-          firstName: "Oliver",
-          lastName: "Kastler",
-          email: "oliver@ideahq.co.nz",
-          phone: "094731234",
-          mobile: "021123456789",
-          avatarUrl: "",
-          profileImage: {
-            id: 278572,
-            imageType: "png",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          },
-          neighbourhoodId: 3606,
-          neighbourhoodName: "Remuera",
-          createdAt: "2018-07-05 11:40:16"
-        },
-        organisation: {
-          id: 278572,
-          name: "Mike Pero Real Estate Rolleston",
-          slug: "mike-pero-real-estate-rolleston",
-          logo: "/attachments/568eb298e26226.96839916.png",
-          logoImage: {
-            id: 278572,
-            imageType: "...",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          }
-        },
-        fromOverride: "BP Tirau",
-        createdAt: "2018-06-08 10:20:30",
-        updatedAt: "2018-07-02 10:20:30",
-        categoryId: 10,
-        categoryFlag: "free",
-        inReplyToMessageId: 10,
-        eventId: 663710,
-        thankType: "thank",
-        originNeighbourhood: {
-          id: 278572,
-          name: "Remuera",
-          parentName: "Auckland",
-          nearbyNeighbourhoodIds: [[1023, 3606]],
-          needsLead: true,
-          isActive: true,
-          neighbourhoodDistrictId: 278572,
-          localPublicationId: 278572
-        },
-        pollId: 12383,
-        isPublic: false,
-        images: [
-          {
-            id: 278572,
-            imagePath: "5b3193b87de1f3.32060714.jpeg",
-            createdAt: "2018-07-02 08:32:03",
-            updatedAt: "2018-07-02 08:32:10",
-            title: "image title, this can be a quite long text",
-            imageWidth: 675,
-            imageHeight: 1200,
-            location: "message_images",
-            type: ["", "email", "video"],
-            isStatic: true,
-            isRelative: true,
-            url: "https://cdn.neighbourly.co.nz/some-image.csv"
-          }
-        ],
-        links: [["https://www.neighbourly.co.nz/", "https://www.google.de/"]],
-        recipientNeighbourhoodIds: [[1023, 3606]],
-        bulkMessageId: 12014,
-        replyMessageIds: [[47972909]],
-        userThanksUserIds: [[5542931, 6520740]],
-        userLikesUserIds: [[5542931, 6520740]],
-        isCurrentlyPromoted: false,
-        promotionType: "local_highlight",
-        isClassified: false,
-        price: "string",
-        externalLink: "string",
-        externalLinkText: "string",
-        fromName: "string"
-      }
-    ]
   },
+
   {
-    id: 8,
-    name: "Volunteering Group",
+    id: 21752,
+    name: "Volunteers",
     slug: "volunteers",
-    description: "Volunteer work to make Auckland a better place",
-    isPrivate: false,
+    description: "Any volunteer work for making Auckland better place",
+    moderatorUserId: 1,
     logo: {
-      imnage: "",
-      url: ""
+      imageBasePath: "/images/cache",
+      image: "/bundles/neighbourlystatic/img/default-business.png",
+      isStatic: true
     },
-    neighbourhoods: [1023, 3606],
-    moderatorUserId: 2,
-    memberUserIds: [1, 304634],
-    messages: [
-      {
-        id: 278572,
-        subject: "Message subject",
-        message: "full message copy",
-        userId: 304634,
-        user: {
-          id: 278572,
-          firstName: "Oliver",
-          lastName: "Kastler",
-          email: "oliver@ideahq.co.nz",
-          phone: "094731234",
-          mobile: "021123456789",
-          avatarUrl: "",
-          profileImage: {
-            id: 278572,
-            imageType: "png",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          },
-          neighbourhoodId: 3606,
-          neighbourhoodName: "Remuera",
-          createdAt: "2018-07-05 11:40:16"
-        },
-        organisation: {
-          id: 278572,
-          name: "Mike Pero Real Estate Rolleston",
-          slug: "mike-pero-real-estate-rolleston",
-          logo: "/attachments/568eb298e26226.96839916.png",
-          logoImage: {
-            id: 278572,
-            imageType: "...",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          }
-        },
-        fromOverride: "BP Tirau",
-        createdAt: "2018-06-08 10:20:30",
-        updatedAt: "2018-07-02 10:20:30",
-        categoryId: 10,
-        categoryFlag: "free",
-        inReplyToMessageId: 10,
-        eventId: 663710,
-        thankType: "thank",
-        originNeighbourhood: {
-          id: 278572,
-          name: "Remuera",
-          parentName: "Auckland",
-          nearbyNeighbourhoodIds: [[1023, 3606]],
-          needsLead: true,
-          isActive: true,
-          neighbourhoodDistrictId: 278572,
-          localPublicationId: 278572
-        },
-        pollId: 12383,
-        isPublic: false,
-        images: [
-          {
-            id: 278572,
-            imagePath: "5b3193b87de1f3.32060714.jpeg",
-            createdAt: "2018-07-02 08:32:03",
-            updatedAt: "2018-07-02 08:32:10",
-            title: "image title, this can be a quite long text",
-            imageWidth: 675,
-            imageHeight: 1200,
-            location: "message_images",
-            type: ["", "email", "video"],
-            isStatic: true,
-            isRelative: true,
-            url: "https://cdn.neighbourly.co.nz/some-image.csv"
-          }
-        ],
-        links: [["https://www.neighbourly.co.nz/", "https://www.google.de/"]],
-        recipientNeighbourhoodIds: [[1023, 3606]],
-        bulkMessageId: 12014,
-        replyMessageIds: [[47972909]],
-        userThanksUserIds: [[5542931, 6520740]],
-        userLikesUserIds: [[5542931, 6520740]],
-        isCurrentlyPromoted: false,
-        promotionType: "local_highlight",
-        isClassified: false,
-        price: "string",
-        externalLink: "string",
-        externalLinkText: "string",
-        fromName: "string"
-      }
-    ]
   },
+
   {
-    id: 9,
+    id: 17507,
     name: "Yoga",
     slug: "yoga-2",
-    description: "All things yoga",
-    isPrivate: false,
+    description: "All things yoga, from private yoga to yoga group classes!",
+    moderatorUserId: 1,
     logo: {
-      imnage: "",
-      url: ""
+      imageBasePath: "/images/cache",
+      imageType: "attachments",
+      image: "582587971d9819.80270941.jpeg",
+      isStatic: false
     },
-    neighbourhoods: [1023, 3606],
-    moderatorUserId: 3,
-    memberUserIds: [1, 304634],
-    messages: [
-      {
-        id: 278572,
-        subject: "Message subject",
-        message: "full message copy",
-        userId: 304634,
-        user: {
-          id: 278572,
-          firstName: "Oliver",
-          lastName: "Kastler",
-          email: "oliver@ideahq.co.nz",
-          phone: "094731234",
-          mobile: "021123456789",
-          avatarUrl: "",
-          profileImage: {
-            id: 278572,
-            imageType: "png",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          },
-          neighbourhoodId: 3606,
-          neighbourhoodName: "Remuera",
-          createdAt: "2018-07-05 11:40:16"
-        },
-        organisation: {
-          id: 278572,
-          name: "Mike Pero Real Estate Rolleston",
-          slug: "mike-pero-real-estate-rolleston",
-          logo: "/attachments/568eb298e26226.96839916.png",
-          logoImage: {
-            id: 278572,
-            imageType: "...",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          }
-        },
-        fromOverride: "BP Tirau",
-        createdAt: "2018-06-08 10:20:30",
-        updatedAt: "2018-07-02 10:20:30",
-        categoryId: 10,
-        categoryFlag: "free",
-        inReplyToMessageId: 10,
-        eventId: 663710,
-        thankType: "thank",
-        originNeighbourhood: {
-          id: 278572,
-          name: "Remuera",
-          parentName: "Auckland",
-          nearbyNeighbourhoodIds: [[1023, 3606]],
-          needsLead: true,
-          isActive: true,
-          neighbourhoodDistrictId: 278572,
-          localPublicationId: 278572
-        },
-        pollId: 12383,
-        isPublic: false,
-        images: [
-          {
-            id: 278572,
-            imagePath: "5b3193b87de1f3.32060714.jpeg",
-            createdAt: "2018-07-02 08:32:03",
-            updatedAt: "2018-07-02 08:32:10",
-            title: "image title, this can be a quite long text",
-            imageWidth: 675,
-            imageHeight: 1200,
-            location: "message_images",
-            type: ["", "email", "video"],
-            isStatic: true,
-            isRelative: true,
-            url: "https://cdn.neighbourly.co.nz/some-image.csv"
-          }
-        ],
-        links: [["https://www.neighbourly.co.nz/", "https://www.google.de/"]],
-        recipientNeighbourhoodIds: [[1023, 3606]],
-        bulkMessageId: 12014,
-        replyMessageIds: [[47972909]],
-        userThanksUserIds: [[5542931, 6520740]],
-        userLikesUserIds: [[5542931, 6520740]],
-        isCurrentlyPromoted: false,
-        promotionType: "local_highlight",
-        isClassified: false,
-        price: "string",
-        externalLink: "string",
-        externalLinkText: "string",
-        fromName: "string"
-      }
-    ]
   },
+
   {
-    id: 10,
+    id: 15417,
     name: "Vegans",
     slug: "vegans",
-    description: "Vegan recipe sharing",
-    isPrivate: false,
+    description: "For recipe sharing, food sharing and vegan ideas",
+    moderatorUserId: 1,
     logo: {
-      imnage: "",
-      url: ""
+      imageBasePath: "/images/cache",
+      image: "/bundles/neighbourlystatic/img/default-business.png",
+      isStatic: true
     },
-    neighbourhoods: [1023, 3606],
-    moderatorUserId: 3,
-    memberUserIds: [1, 304634],
-    messages: [
-      {
-        id: 278572,
-        subject: "Message subject",
-        message: "full message copy",
-        userId: 304634,
-        user: {
-          id: 278572,
-          firstName: "Oliver",
-          lastName: "Kastler",
-          email: "oliver@ideahq.co.nz",
-          phone: "094731234",
-          mobile: "021123456789",
-          avatarUrl: "",
-          profileImage: {
-            id: 278572,
-            imageType: "png",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          },
-          neighbourhoodId: 3606,
-          neighbourhoodName: "Remuera",
-          createdAt: "2018-07-05 11:40:16"
-        },
-        organisation: {
-          id: 278572,
-          name: "Mike Pero Real Estate Rolleston",
-          slug: "mike-pero-real-estate-rolleston",
-          logo: "/attachments/568eb298e26226.96839916.png",
-          logoImage: {
-            id: 278572,
-            imageType: "...",
-            image: "...",
-            url: "https://cdn.neighbourly.co.nz/some-image.svg"
-          }
-        },
-        fromOverride: "BP Tirau",
-        createdAt: "2018-06-08 10:20:30",
-        updatedAt: "2018-07-02 10:20:30",
-        categoryId: 10,
-        categoryFlag: "free",
-        inReplyToMessageId: 10,
-        eventId: 663710,
-        thankType: "thank",
-        originNeighbourhood: {
-          id: 278572,
-          name: "Remuera",
-          parentName: "Auckland",
-          nearbyNeighbourhoodIds: [[1023, 3606]],
-          needsLead: true,
-          isActive: true,
-          neighbourhoodDistrictId: 278572,
-          localPublicationId: 278572
-        },
-        pollId: 12383,
-        isPublic: false,
-        images: [
-          {
-            id: 278572,
-            imagePath: "5b3193b87de1f3.32060714.jpeg",
-            createdAt: "2018-07-02 08:32:03",
-            updatedAt: "2018-07-02 08:32:10",
-            title: "image title, this can be a quite long text",
-            imageWidth: 675,
-            imageHeight: 1200,
-            location: "message_images",
-            type: ["", "email", "video"],
-            isStatic: true,
-            isRelative: true,
-            url: "https://cdn.neighbourly.co.nz/some-image.csv"
-          }
-        ],
-        links: [["https://www.neighbourly.co.nz/", "https://www.google.de/"]],
-        recipientNeighbourhoodIds: [[1023, 3606]],
-        bulkMessageId: 12014,
-        replyMessageIds: [[47972909]],
-        userThanksUserIds: [[5542931, 6520740]],
-        userLikesUserIds: [[5542931, 6520740]],
-        isCurrentlyPromoted: false,
-        promotionType: "local_highlight",
-        isClassified: false,
-        price: "string",
-        externalLink: "string",
-        externalLinkText: "string",
-        fromName: "string"
-      }
-    ]
-  }
+  },
 ];
 
 const moderators = [
