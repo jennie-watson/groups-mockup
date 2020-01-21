@@ -19,24 +19,27 @@ const GroupList = ({ groups, onDeleteClick }) => (
           <tr key={group.id}>
             <td>
               <a
-                className="btn btn-outline-info"
+                className="btn btn-outline-primary"
                 href={"https://www.neighbourly.co.nz/group/" + group.slug}
               >
-                Groups
+                Group Link
               </a>
             </td>
-            <td>
-              <Link to={"/group/" + group.slug}>{group.name}</Link>
-            </td>
+            <td>{group.name}</td>
             <td>{group.moderatorName}</td>
             <td>{group.description}</td>
             <td>
               <button
-                className="btn btn-outline-danger"
+                className="btn btn-outline-danger d-flex m-2"
                 onClick={() => onDeleteClick(group)}
               >
                 Delete
               </button>
+              <Link to={"/group/" + group.slug} style={{ textDecoration: 'none' }}>
+                <button className="btn btn-outline-info d-flex m-2">
+                  Edit
+                </button>
+              </Link>
             </td>
           </tr>
         );

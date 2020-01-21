@@ -50,8 +50,8 @@ export function ManageGroupPage({
     const errors = {};
 
     if (!name) errors.name = "Name is required.";
-    if (!moderatorUserId) errors.moderator = "Moderator is required.";
     if (!description) errors.description = "Description is required.";
+    if (!moderatorUserId) errors.moderator = "Moderator is required.";
 
     setErrors(errors);
     // Form is valid if the errors object still has no properties
