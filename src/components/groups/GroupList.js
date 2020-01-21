@@ -22,7 +22,7 @@ const GroupList = ({ groups, onDeleteClick }) => (
                 className="btn btn-outline-primary"
                 href={"https://www.neighbourly.co.nz/group/" + group.slug}
               >
-                Group Link
+                Link
               </a>
             </td>
             <td>{group.name}</td>

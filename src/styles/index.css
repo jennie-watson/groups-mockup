@@ -45,6 +45,12 @@ nav {
   align-items: center;
 }
 
-.about-page {
-  text-align: center;
+.form-check-label {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+h5 {
+  font-weight: 550;
+  margin: 20px 0 10px 0;
 }

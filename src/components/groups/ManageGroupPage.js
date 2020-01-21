@@ -64,7 +64,7 @@ export function ManageGroupPage({
     setSaving(true);
     saveGroup(group)
       .then(() => {
-        toast.success("Group saved.");
+        toast.success("Group created.");
         history.push("/groups");
       })
       .catch(error => {

@@ -18,9 +18,9 @@ function renderGroupForm(args) {
   return render(<GroupForm {...props} />);
 }
 
-it("should render Add Group header", () => {
+it("should render Create Group header", () => {
   const { getByText } = renderGroupForm();
-  getByText("Add Group");
+  getByText("Create Group");
 });
 
 it('should label save button as "Save" when not saving', () => {

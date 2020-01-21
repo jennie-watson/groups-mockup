@@ -20,7 +20,7 @@ it("renders form and header", () => {
   const wrapper = renderGroupForm();
   // console.log(wrapper.debug());
   expect(wrapper.find("form").length).toBe(1);
-  expect(wrapper.find("h2").text()).toEqual("Add Group");
+  expect(wrapper.find("h2").text()).toEqual("Create Group");
 });
 
 it('labels save buttons as "Save" when not saving', () => {

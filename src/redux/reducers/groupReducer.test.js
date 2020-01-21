@@ -1,7 +1,7 @@
 import groupReducer from "./groupReducer";
 import * as actions from "../actions/groupActions";
 
-it("should add group when passed CREATE_GROUP_SUCCESS", () => {
+it("should create group when passed CREATE_GROUP_SUCCESS", () => {
   // arrange
   const initialState = [
     {

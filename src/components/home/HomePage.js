@@ -8,7 +8,7 @@ const HomePage = () => (
       <img src={Logo} alt="Neighbourly Logo" />
       <h1>Groups</h1>
       <br />
-      <h6>Neighbourly Groups mockup using React, Redux and React Router.</h6>
+      <p>Neighbourly Groups mockup using React, Redux and React Router.</p>
       <br />
       <Link
         to="about"
