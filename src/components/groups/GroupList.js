@@ -20,9 +20,9 @@ const GroupList = ({ groups, onDeleteClick }) => (
             <td>
               <a
                 className="btn btn-outline-primary"
-                href={"https://www.neighbourly.co.nz/group/" + group.slug}
+                href="/group-details"
               >
-                Link
+                Details
               </a>
             </td>
             <td>{group.name}</td>
@@ -35,7 +35,10 @@ const GroupList = ({ groups, onDeleteClick }) => (
               >
                 Delete
               </button>
-              <Link to={"/group/" + group.slug} style={{ textDecoration: 'none' }}>
+              <Link
+                to={"/group/" + group.slug}
+                style={{ textDecoration: "none" }}
+              >
                 <button className="btn btn-outline-info d-flex m-2">
                   Edit
                 </button>
