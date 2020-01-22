@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import HomePage from "./home/HomePage";
 import AboutPage from "./about/AboutPage";
 import Header from "./common/Header";
+import Footer from "./common/Footer";
 import PageNotFound from "./PageNotFound";
 import GroupsPage from "./groups/GroupsPage";
 import GroupDetails from "./groups/GroupDetails";
@@ -13,19 +14,22 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <div className="container-fluid">
+    <>
       <Header />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/about" component={AboutPage} />
-        <Route path="/groups" component={GroupsPage} />
-        <Route path="/group/:slug" component={ManageGroupPage} />
-        <Route path="/group" component={ManageGroupPage} />
-        <Route path="/group-details" component={GroupDetails} />
-        <Route component={PageNotFound} />
-      </Switch>
+      <div className="content">
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/groups" component={GroupsPage} />
+          <Route path="/group/:slug" component={ManageGroupPage} />
+          <Route path="/group" component={ManageGroupPage} />
+          <Route path="/group-details" component={GroupDetails} />
+          <Route component={PageNotFound} />
+        </Switch>
+      </div>
+      <Footer />
       <ToastContainer autoClose={3000} hideProgressBar />
-    </div>
+    </>
   );
 }
 

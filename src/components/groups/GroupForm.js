@@ -141,7 +141,7 @@ const GroupForm = ({
         disabled={saving}
         className="btn btn-primary rounded-lg d-flex mx-auto justify-content-center align-items-center w-50"
       >
-        {saving ? "Creating..." : "Create a group"}
+        {saving ? "Saving..." : "Save"}
       </button>
     </form>
   );

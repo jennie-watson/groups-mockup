@@ -1,10 +1,14 @@
 #app {
   max-width: 50%;
+  height: 100vh;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-nav {
-  padding: 20px 0 20px 0;
+/* creates sticky-footer */
+.content {
+  flex: 1 0 auto;
 }
 
 .navbar {
@@ -38,6 +42,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 .banner img {
@@ -53,4 +58,116 @@ nav {
 h5 {
   font-weight: 550;
   margin: 20px 0 10px 0;
+}
+
+.anchor {
+  cursor: pointer;
+  color: #0b9abc;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:visited,
+.anchor:visited,
+a.visited,
+.anchor.visited {
+  color: #08738c;
+  text-decoration: none;
+}
+
+a:focus:not(.button),
+.anchor:focus:not(.button),
+a.focus:not(.button),
+.anchor.focus:not(.button) {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(11, 154, 188, 0.24);
+  border-radius: 0.25rem;
+}
+
+a:active,
+.anchor:active,
+a.active,
+.anchor.active {
+  outline: none;
+  color: #08738c;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dashed;
+  text-decoration-style: dashed;
+}
+
+a:hover,
+.anchor:hover,
+a.hover,
+.anchor.hover {
+  color: #08738c;
+  text-decoration: underline;
+  -webkit-text-decoration-style: solid;
+  text-decoration-style: solid;
+}
+
+/* FOOTER */
+nav {
+  padding: 10px 0 20px 0;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.25rem;
+
+}
+@media (min-width: 48rem) {
+  .footer {
+    max-width: 77rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+  }
+}
+
+.footer .copyright {
+  color: #999999;
+  padding-right: 0.5rem;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+}
+
+.footer nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+  margin-top: auto;
+}
+
+.footer nav a {
+  font-size: 0.75rem;
+  line-height: 1.66666667;
+  color: #999999;
+}
+
+.footer nav a:hover {
+  color: #545454;
+}
+
+.footer nav a:not(:last-child) {
+  margin-right: 0.5rem;
 }
