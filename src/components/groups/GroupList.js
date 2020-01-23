@@ -27,7 +27,7 @@ const GroupList = ({ groups, onDeleteClick }) => (
             <td>{group.description}</td>
             <td>
               <button
-                className="btn btn-outline-danger d-flex m-2"
+                className="btn btn-outline-danger rounded d-flex m-2"
                 onClick={() => onDeleteClick(group)}
               >
                 Delete
@@ -36,7 +36,7 @@ const GroupList = ({ groups, onDeleteClick }) => (
                 to={"/group/" + group.slug}
                 style={{ textDecoration: "none" }}
               >
-                <button className="btn btn-outline-info d-flex m-2">
+                <button className="btn btn-outline-info rounded d-flex m-2">
                   Edit
                 </button>
               </Link>

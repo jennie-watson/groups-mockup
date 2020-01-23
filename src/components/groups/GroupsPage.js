@@ -50,7 +50,7 @@ class GroupsPage extends React.Component {
           <>
             <button
               style={{ marginBottom: 20 }}
-              className="btn btn-info"
+              className="btn btn-info rounded"
               onClick={() => this.setState({ redirectToAddGroupPage: true })}
             >
               Create Group
