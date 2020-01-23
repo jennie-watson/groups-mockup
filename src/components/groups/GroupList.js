@@ -18,10 +18,7 @@ const GroupList = ({ groups, onDeleteClick }) => (
         return (
           <tr key={group.id}>
             <td>
-              <a
-                className="btn btn-outline-primary"
-                href="/group-details"
-              >
+              <a className="btn btn-outline-primary" href="/group-details">
                 Details
               </a>
             </td>

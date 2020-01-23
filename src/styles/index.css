@@ -119,16 +119,15 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: baseline;
   -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-bottom: 0.25rem;
-
 }
 @media (min-width: 48rem) {
   .footer {
@@ -152,8 +151,8 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-bottom: 0.5rem;
   margin-top: auto;
 }
@@ -170,4 +169,129 @@ nav {
 
 .footer nav a:not(:last-child) {
   margin-right: 0.5rem;
+}
+
+/* Group-Details */
+.card-privacy {
+  opacity: 0.8;
+}
+
+.card-privacy p {
+  opacity: 0.8;
+  padding: 5px 10px 5px 10px;
+  margin: 0;
+}
+
+.card-privacy div {
+  padding: 5px 10px 0px 10px;
+  margin: 0 !important;
+}
+
+.group-description h6 {
+  margin: 0 !important;
+  padding: 10px 10px 5px 10px;
+}
+
+h6 {
+  margin: 0 !important;
+  padding: 10px 10px 5px 0px;
+}
+
+.group-description p {
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 0;
+}
+
+/* posts on group-details */
+.post {
+  background: #ffffff;
+  border: solid 0.0625rem #d9d9d9;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  border-left-width: 0;
+  border-right-width: 0;
+  border-radius: 0;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 48rem) {
+  .post {
+    border-left-width: 0.0625rem;
+    border-right-width: 0.0625rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.post .post-user {
+  padding: 0px 10px 5px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.post .post-user .avatar {
+  margin-right: 0.5rem;
+}
+
+.post .post-user h5 {
+  margin: 0;
+}
+
+.post .post-user span {
+  display: block;
+}
+.post .post-content {
+  padding: 5px 10px 5px 10px;
+}
+
+.post .post-buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.post .post-buttons .primary-actions {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.post .button .icon {
+  color: #999999;
+}
+
+.post .button:hover .icon {
+  color: #545454;
 }
